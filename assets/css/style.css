@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+.mapdiv{
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+    
+
+}
+.mapdiv path{
+    stroke: #eee;
+    stroke-width: .25;
+}
+
+body{
+    background-color: #ffffff;
+    background-image: url(/img/Hannibal-Route\ \(1\).jpeg);
+}
+.mapdiv :hover{
+    fill: #006284;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.background-clip{
+    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+
+}
