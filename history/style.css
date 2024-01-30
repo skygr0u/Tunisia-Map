@@ -1,5 +1,5 @@
 body{
-    background-image: url(../img/Hannibal-Route\ \(1\).jpeg);
+    background-image: url(../img/history_bg.jpeg);
     overflow: hidden;
 }
 .container{
@@ -115,6 +115,6 @@ body{
     border:1px solid #555;
     transition: 0.5s;
 }.buttons button:hover{
-    background-color: #EFE0C1;
+    background-color: grey;
 }
   

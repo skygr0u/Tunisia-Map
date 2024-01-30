@@ -7,7 +7,7 @@
 .mapdiv{
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 10px;
     
 
 }
@@ -21,7 +21,7 @@ body{
     background-image: url(/img/Hannibal-Route\ \(1\).jpeg);
 }
 .mapdiv :hover{
-    fill: #006284;
+    fill: #2c4c3b;
     transition: 0.6s;
     cursor: pointer;
 }

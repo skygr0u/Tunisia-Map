@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title id="pageTitle"></title>
+    <!-- Favicons -->
+    <link href="/img/Tunisia_icon.png" rel="icon">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="column1">
+                <h1 id="pageH1"></h1>
+                <p id="pageP"></p>
+                <a href="#" id="pageButtonLink"><button type="button">Show More</button></a>
+            </div>
+            <div class="column2">
+                <div class="image-container">
+                    <div class="images" id="image1" style="background-image: url();">
+                        <h2 class="image-title" id="imageTitle1"></h2>
+                    </div>
+                    <div class="images" id="image2" style="background-image: url();">
+                        <h2 class="image-title" id="imageTitle2"></h2>
+                    </div>
+                </div>
+                <iframe id="pageIframe" width="630" height="330" style="border:0; display: inline-block; margin-left: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Get values from URL parameters
+        var pageTitle = getParameterByName('pageTitle');
+        var pageH1 = getParameterByName('pageH1');
+        var pageP = getParameterByName('pageP');
+        var backgroundImage = getParameterByName('backgroundImage');
+        var pageButtonLink = getParameterByName('pageButtonLink');
+        var image1Bg = getParameterByName('image1Bg');
+        var imageTitle1 = getParameterByName('imageTitle1');
+        var image2Bg = getParameterByName('image2Bg');
+        var imageTitle2 = getParameterByName('imageTitle2');
+        var pageIframeSrc = getParameterByName('pageIframeSrc');
+        
+
+        // Set values in the HTML
+        document.getElementById('pageTitle').innerText = pageTitle || 'Default Title';
+        document.getElementById('pageH1').innerText = pageH1 || 'Default H1';
+        document.querySelector('.container').style.backgroundImage = 'url("' + (backgroundImage || '') + '")';
+        document.getElementById('pageP').innerText = pageP || 'Default Paragraph';
+        document.getElementById('pageButtonLink').href = pageButtonLink || '#';
+        document.getElementById('image1').style.backgroundImage = 'url("' + (image1Bg || '') + '")';
+        document.getElementById('imageTitle1').innerText = imageTitle1 || 'Default Image Title 1';
+        document.getElementById('image2').style.backgroundImage = 'url("' + (image2Bg || '') + '")';
+        document.getElementById('imageTitle2').innerText = imageTitle2 || 'Default Image Title 2';
+        document.getElementById('pageIframe').src = pageIframeSrc || 'https://www.example.com';
+    </script>
+
+</body>
+</html>
