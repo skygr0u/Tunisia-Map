@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.st0{fill:#777471;
+    stroke:#000000;
+    stroke-width:0.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.mapdiv{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    
+
+}
+.mapdiv path{
+    stroke: #eee;
+    stroke-width: .25;
+}
+
+body{
+    background-color: #ffffff;
+    background-image: url(/img/black.webp);
+}
+.mapdiv :hover{
+    fill: #141313;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.background-clip{
+    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+}

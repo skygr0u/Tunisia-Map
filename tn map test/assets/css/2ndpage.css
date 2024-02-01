@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/img/history_bg.jpeg);
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  padding-top: 150px;
+  height: 900px; 
+  /* Should be removed. Only for demonstration */
+
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.images {
+  /*border: 1px solid #ddd;*/
+  border-radius: 15px;
+  padding: 5px;
+  width: 400px;
+  height: 350px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.column:hover {
+  /*background-color: #f0f0f0;  Change the background color on hover */
+  transform: translateY(-15px); /* Move the column up by 5 pixels on hover */
+}
+
+.home-button {
+  text-align: center;
+  margin-top: 170px;  
+}
+
+.home-button a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.home-button a:hover {
+  color: #000;
+}
+
+h2 {
+  font-weight: bolder;
+  font-size: x-large;
+  color: white;
+}

@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  background-color: #000;
+  transition: width 600ms ease;
+
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 33px;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #141418;
+  color: #ececec;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.fa-primary {
+  color: white;
+}
+
+.fa-secondary {
+  color: red;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: 600ms;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: red;
+  background: #141418;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: 600ms;
+  width: 50px;
+}
+
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: 600ms;
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.solar #solarIcon {
+  display: block;
+}

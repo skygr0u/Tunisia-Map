@@ -3,6 +3,14 @@
     margin: 0px;
     box-sizing: border-box;
 }
+.aa {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    fill: white; 
+  }
 
 .st0{fill:#777471;
     stroke:#000000;

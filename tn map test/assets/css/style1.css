@@ -1,0 +1,24 @@
+h1{
+    color: rgb(255, 255, 255);
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+    font-size: 40px;
+    padding: 24px;
+    font-weight: bold;
+}
+p{
+    font-style: normal; 
+    
+}
+
+iframe{
+    float: right;
+    padding-right: 22px;
+}
+pre{
+    color: rgb(255, 255, 255);
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 18px;
+    padding-left: 24px;
+    font-weight: bold;
+}
